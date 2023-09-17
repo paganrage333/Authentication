@@ -1,13 +1,11 @@
 
 {% extends 'base.html' %}
 
-{% block title %}
-Create User
-{% endblock %}
+{% block title %}Add Feedback{% endblock %}
 
 {% block content %}
 
-<h1>Signup</h1>
+<h1>Add Feedback</h1>
 
 <form method="POST">
 
@@ -23,9 +21,9 @@ Create User
   </div>
   {% endfor %}
 
-  {% for field in form if field.widget.input_type != 'hidden' %}
+    {% for field in form if field.widget.input_type != 'hidden' %}
 
-  <div class="row">
+  <div>
     {{field.label}}
     <div>
       {{field}}
@@ -34,7 +32,7 @@ Create User
 
   {% endfor %}
 
-  <button>Sign up!</button>
+  <button>Add!</button>
 </form>
 
 {% endblock %}

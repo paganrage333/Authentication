@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}
-Create User
-{% endblock %}
+{% block title %}Edit Feedback{% endblock %}
 
 {% block content %}
 
-<h1>Login a user</h1>
-<form method="POST">
+<h1>Edit Feedback</h1>
+
+<form method="POST" action="/feedback/{{ feedback.id }}/update">
 
   {{form.hidden_tag()}}
-
+  
   {% for field in form.errors %}
     <div>{{ field }}:
       <ul>
@@ -32,7 +31,7 @@ Create User
 
   {% endfor %}
 
-  <button>Login!</button>
+  <button>Edit!</button>
 </form>
 
 {% endblock %}
